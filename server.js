@@ -19,6 +19,10 @@ app.get("/", (req, res) => {
 // New GET/pokemon/new
 
 // Destroy DELETE/pokemon:id
+app.delete("/pokemon/:indexOfPokemon", (req, res) => {
+  pokemon.splice(req.params.indexOfPokemon, 1);
+  res.redirect("/pokemon");
+});
 
 // Update PUT/pokemon/:id
 
@@ -32,6 +36,7 @@ app.get("/pokemon/:indexOfPokemon", (req, res) => {
     pokemon: pokemon[req.params.indexOfPokemon],
   });
 });
+
 // Port listening
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

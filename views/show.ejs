@@ -4,12 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
         </style>
     <style>
         body {
             font-family: "Press Start 2P";
+            margin-left: 1%;
+        }
+        h1 {
+          margin-top: 1%;
+        }
+        img {
+          border: 5px solid black;
+          border-radius: 25px;
         }
     </style>
   <% if (pokemon.type[0] == "Grass") { %>
@@ -102,6 +118,16 @@
                                   background-color: #7038f8;
                                 }
                               </style>
+                              <style>
+                                button {
+                                  background-color: auto;
+                                }
+                              </style>
+                              <style>
+                                button {
+                                  color: white;
+                                }
+                              </style>
                               <% } %>
     <title><%= pokemon.name %></title>
   </head>
@@ -127,5 +153,10 @@
       <li>Speed: <%= pokemon.stats.speed %></li>
       </ul>
     </p>
+    <div class="container">
+      <form action="/pokemon/edit/">
+        <button>Edit Pokémon</button>
+      </form>
+    </div>
   </body>
 </html>
