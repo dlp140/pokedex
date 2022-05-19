@@ -8,13 +8,17 @@
   </head>
   <body>
     <h1><%= pokemon.name %></h1>
+    <p>#<%=pokemon.id%></p>
     <img src="<%=pokemon.img%>" />
     <p>
       <strong>Type:</strong> <%= pokemon.type[0] %> <% if (pokemon.type[1]) { %>
       / <%= pokemon.type[1] %> <% } %>
+      
     </p>
+    <p><strong>Height: </strong> <%= pokemon.misc.height %></p>
+    <p><strong>Weight: </strong> <%= pokemon.misc.weight %> kg.</p>
     <p>
-      <strong> Stats: </strong>
+      <strong><u>Stats</u></strong>
       <ul>
       <li>HP: <%= pokemon.stats.hp %></li>
       <li>Attack: <%= pokemon.stats.attack %></li>
