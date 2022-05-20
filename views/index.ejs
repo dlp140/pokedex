@@ -19,11 +19,16 @@
   <body>
     <h1>Pokémon</h1>
     <br />
-    <!-- <ul style="list-style-type:none"> -->
     <% for (let i=0 ; i < pokemon.length ; i++) { %>
     <a href="/pokemon/<%= i %>"
       ><img src="<%=pokemon[i].img%>" height="150" width="auto"
     /></a>
+    <form action="/pokemon/<%=i%>/edit">
+      <input type="submit" value="EDIT" />
+    </form>
+    <form action="/pokemon/<%=i; %>?_method=DELETE" method="POST">
+      <input type="submit" value="DELETE" />
+    </form>
     <% } %>
   </body>
 </html>
