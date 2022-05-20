@@ -1,6 +1,7 @@
 // Require Dependencies
 const express = require("express");
 const methodOverride = require("method-override");
+const { pop } = require("./models/pokemon");
 
 const pokemon = require("./models/pokemon");
 
@@ -37,6 +38,10 @@ app.put("/pokemon/:id", (req, res) => {
 });
 
 // Create POST/pokemon
+app.post("/pokemon", (req, res) => {
+  pokemon.push(req.body);
+  res.redirect("/pokemon");
+});
 
 // Edit GET/pokemon
 app.get("/pokemon/:id/edit", (req, res) => {
