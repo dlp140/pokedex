@@ -13,17 +13,25 @@
           h1 {
               font-family: "Press Start 2P";
           }
+          .button {
+              margin-left: 12%;
+          }
       </style>
   </head>
   <body>
     <h1>Edit <%=pokemon.name%></h1>
     <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
         HP: <input type="number" name="HP" value="<%= pokemon.stats.hp %>" /><br />
+        <p></p>
         Attack: <input type="number" name="Attack" value="<%= pokemon.stats.attack %>" /><br />
+        <p></p>
         Defense: <input type="number" name="Defense" value="<%= pokemon.stats.defense %>"><br />
+        <p></p>
         Special Attack: <input type="number" name="Attack" value="<%= pokemon.stats.spattack %>" /><br />
+        <p></p>
         Special Defense: <input type="number" name="Special Defense" value="<%= pokemon.stats.spdefense %>">
+        <p></p>
         <br />
-        <input type="submit" name="" value="Submit Changes" />
+        <input class='button' type="submit" name="" value="Submit Changes" />
   </body>
 </html>

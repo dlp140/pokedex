@@ -20,6 +20,9 @@ app.get("/pokemon/", (req, res) => {
 });
 
 // New GET/pokemon/new
+app.get("/pokemon/new", (req, res) => {
+  res.render("new.ejs");
+});
 
 // Destroy DELETE/pokemon:id
 app.delete("/pokemon/:id", (req, res) => {

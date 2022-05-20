@@ -8,17 +8,32 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
     </style>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
     <style>
       h1 {
         text-align: center;
         font-family: "Press Start 2P";
+      }
+      .new {
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <h1>Pokémon</h1>
     <br />
+    <div class="container">
+      <form class="new" action="/pokemon/new/">
+        <button>New Pokémon</button>
+      </form>
+    </div>
     <% for (let i=0 ; i < pokemon.length ; i++) { %>
     <a href="/pokemon/<%= i %>"
       ><img src="<%=pokemon[i].img%>" height="150" width="auto"
