@@ -33,8 +33,8 @@ app.delete("/pokemon/:id", (req, res) => {
 
 // Update PUT/pokemon/:id
 app.put("/pokemon/:id", (req, res) => {
-  pokemon[req.params.id] = req.body;
   res.redirect("/pokemon");
+  console.log(req.body);
 });
 
 // Create POST/pokemon
