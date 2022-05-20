@@ -9,26 +9,32 @@
   <body>
     <h1>New Pokémon Page</h1>
     <form action="/pokemon" method="POST">
-      Name: <input type="text" name="name" /><br />
+      <input placeholder="name" type="text" name="name" /><br />
       <p></p>
-      ID: <input type="number" name="id" /><br />
+      <input placeholder="id" type="number" name="id" /><br />
       <p></p>
-      Type: <input type="text" name="type" /> <br />
+      <input placeholder="type" type="text" name="type" /> <br />
       <p></p>
-      Height: <input type="text" name="misc.height" /><br />
+      <input placeholder="height" type="text" name="height" /><br />
       <p></p>
-      Weight: <input type="number" name="misc.weight" /><br />
-      HP: <input type="number" name="stats.hp" /> <br />
+      <input placeholder="weight" type="number" name="weight" /><br />
       <p></p>
-      Attack: <input type="number" name="stats.attack" /> <br />
+      <input placeholder="hp" type="number" name="hp" /> <br />
       <p></p>
-      Defense: <input type="number" name="stats.defense" /> <br />
+      <input placeholder="attack" type="number" name="attack" />
+      <br />
       <p></p>
-      Special Attack: <input type="number" name="stats.spattack" /> <br />
+      <input placeholder="defense" type="number" name="defense" />
+      <br />
       <p></p>
-      Special Defense: <input type="number" name="stats.spdefense" /> <br />
+      <input placeholder="special attack" type="number" name="spattack" />
+      <br />
       <p></p>
-      Speed: <input type="number" name="stats.speed" /> <br />
+      <input placeholder="special defense" type="number" name="spdefense" />
+      <br />
+      <p></p>
+      <input placeholder="speed" type="number" name="speed" />
+      <br />
       <p></p>
       <input type="submit" value="Create Pokémon" />
     </form>

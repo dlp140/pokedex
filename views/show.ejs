@@ -24,6 +24,7 @@
           margin-top: 1%;
         }
         img {
+          width: 370px;
           border: 5px solid black;
           border-radius: 25px;
         }
@@ -36,14 +37,14 @@
     <h3>#<%=pokemon.id%></h3>
     <img src="<%=pokemon.img%>" />
     <p>
-      <strong>Type:</strong> <%= pokemon.type[0] %> <% if (pokemon.type[1]) { %>
+      Type: <%= pokemon.type[0] %> <% if (pokemon.type[1]) { %>
       / <%= pokemon.type[1] %> <% } %>
       
     </p>
-    <p><strong>Height: </strong> <%= pokemon.misc.height %></p>
-    <p><strong>Weight: </strong> <%= pokemon.misc.weight %> kg.</p>
+    <p>Height:  <%= pokemon.misc.height %></p>
+    <p>Weight:  <%= pokemon.misc.weight %> kg.</p>
     <p>
-      <strong><u>Stats</u></strong>
+      <u>Stats</u>
       <ul>
       <li>HP: <%= pokemon.stats.hp %></li>
       <li>Attack: <%= pokemon.stats.attack %></li>

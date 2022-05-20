@@ -8,14 +8,14 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
     </style>
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
-    />
+    /> -->
     <style>
       h1 {
         text-align: center;
@@ -24,26 +24,37 @@
       .new {
         text-align: center;
       }
+      img {
+        margin-top: 5px;
+        width: 150px;
+        height: auto;
+        border: 5px solid black;
+        border-radius: 25px;
+      }
     </style>
   </head>
   <body>
     <h1>Pokémon</h1>
     <br />
-    <div class="container">
+    <div class="newbutton">
       <form class="new" action="/pokemon/new/">
         <button>New Pokémon</button>
       </form>
+      <br />
     </div>
-    <% for (let i=0 ; i < pokemon.length ; i++) { %>
-    <a href="/pokemon/<%= i %>"
-      ><img src="<%=pokemon[i].img%>" height="150" width="auto"
-    /></a>
-    <form action="/pokemon/<%=i%>/edit">
-      <input type="submit" value="EDIT" />
-    </form>
-    <form action="/pokemon/<%=i; %>?_method=DELETE" method="POST">
-      <input type="submit" value="DELETE" />
-    </form>
-    <% } %>
+    <div class="container">
+      <% for (let i=0 ; i < pokemon.length ; i++) { %>
+      <a href="/pokemon/<%= i %>"
+        ><img src="<%=pokemon[i].img%>" height="150" width="auto"
+      /></a>
+      <p><a href="/pokemon/<%= i %>"><%= pokemon[i].name %></a></p>
+      <form action="/pokemon/<%=i%>/edit">
+        <input type="submit" value="EDIT" />
+      </form>
+      <form action="/pokemon/<%=i; %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE" />
+      </form>
+      <% } %>
+    </div>
   </body>
 </html>
