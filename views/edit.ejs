@@ -21,18 +21,18 @@
   <body>
     <h1>Edit <%=pokemon.name%></h1>
     <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
-        HP: <input type="number" name="HP" value="<%= pokemon.stats.hp %>" /><br />
+        HP: <input type="number" name="hp" value="<%= pokemon.stats.hp %>" /><br />
         <p></p>
-        Attack: <input type="number" name="Attack" value="<%= pokemon.stats.attack %>" /><br />
+        Attack: <input type="number" name="attack" value="<%= pokemon.stats.attack %>" /><br />
         <p></p>
-        Defense: <input type="number" name="Defense" value="<%= pokemon.stats.defense %>"><br />
+        Defense: <input type="number" name="defense" value="<%= pokemon.stats.defense %>"><br />
         <p></p>
-        Special Attack: <input type="number" name="Special Attack" value="<%= pokemon.stats.spattack %>" /><br />
+        Special Attack: <input type="number" name="spattack" value="<%= pokemon.stats.spattack %>" /><br />
         <p></p>
-        Special Defense: <input type="number" name="Special Defense" value="<%= pokemon.stats.spdefense %>">
+        Special Defense: <input type="number" name="spdefense" value="<%= pokemon.stats.spdefense %>">
         <br />
         <p></p>
-        Speed: <input type="number" name="Speed" value="<%= pokemon.stats.speed %>"><br />
+        Speed: <input type="number" name="speed" value="<%= pokemon.stats.speed %>"><br />
         <p></p>
         <input class='button' type="submit" name="" value="Submit Changes" />
   </body>
