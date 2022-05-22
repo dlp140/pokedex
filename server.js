@@ -1,8 +1,6 @@
 // Require Dependencies
 const express = require("express");
-const { type } = require("express/lib/response");
 const methodOverride = require("method-override");
-const { pop } = require("./models/pokemon");
 
 const pokemon = require("./models/pokemon");
 
@@ -34,8 +32,14 @@ app.delete("/pokemon/:id", (req, res) => {
 
 // Update PUT/pokemon/:id
 app.put("/pokemon/:id", (req, res) => {
-  pokemon[req.params.id] = req.body;
-  res.redirect("/pokemon");
+  stats = {
+    hp: req.body.hp,
+    attack: req.body.attack,
+    defense: req.body.defense,
+    speed: req.body.speed,
+  };
+  pokemon[req.params.id].stats = req.body;
+  res.redirect(`${req.params.id}`);
   console.log(req.body);
 });
 
@@ -61,7 +65,7 @@ app.post("/pokemon", (req, res) => {
   };
   pokemon.push(newPokemon);
   res.redirect("/pokemon");
-  console.log(newPokemon);
+  // console.log(newPokemon);
 });
 
 // Edit GET/pokemon
